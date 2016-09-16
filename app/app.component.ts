@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 
-export class Player {
-    id: number;
-    name: string;
-}
+import { Player } from './player';
 
 const PLAYERS: Player[] = [
     { id: 1, name: 'Lama' },
@@ -34,16 +31,8 @@ The player of let player is the player in onSelect arg
                 <span class="badge">{{player.id}}</span> {{player.name}}
             </li>
         </ul>
-    
-        <div *ngIf="selectedPlayer">
-            <h2>{{selectedPlayer.name}} details!</h2>
-            <div><label>id: </label>{{selectedPlayer.id}}</div>
-
-            <div>
-                <label>name: </label>
-                <input [(ngModel)]="selectedPlayer.name" placeholder="name">
-            </div>
-        </div>
+        <my-player-detail [player]="selectedPlayer"></my-player-detail>
+       
     `,
     styles: [`
       .selected {

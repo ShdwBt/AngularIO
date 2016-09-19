@@ -1,20 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit }        from '@angular/core';
 
-import { Player } from './player';
-
-const PLAYERS: Player[] = [
-    { id: 1, name: 'Lama' },
-    { id: 2, name: 'Mendy' },
-    { id: 3, name: 'Thiago Silva' },
-    { id: 4, name: 'Yepes' },
-    { id: 5, name: 'Maxwell' },
-    { id: 6, name: 'Verrati' },
-    { id: 7, name: 'Menez' },
-    { id: 8, name: 'Matuidi' },
-    { id: 9, name: 'Pastore' },
-    { id: 10, name: 'Zlatan' },
-    { id: 11, name: 'Nene' }
-];
+import { Player }           from './player';
+import { PlayerService }    from './player.service';
 
 
 /* The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template.
@@ -82,22 +69,30 @@ The player of let player is the player in onSelect arg
         margin-right: .8em;
         border-radius: 4px 0 0 4px;
       }
-    `]
+    `],
+    providers: [PlayerService]
 
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
     title = 'Tour of Players';
     
-    players = PLAYERS;
+    players: Player[];
     
     selectedPlayer: Player;
-//    player: Player = {
-//        id: 1,
-//        name: 'Zlatan'
-//    },
-    //players = PLAYERS;
-    //players = PLAYERS;
+    
+    // service injection
+    //  Angular will know to supply an instance of the service when it creates a new AppComponent.
+    constructor( private playerService: PlayerService){}
+
+    //We pass our callback function as an argument to the Promise's then method
+    getPlayers(): void {
+        this.playerService.getPlayers().then(players => this.players = players);
+    }
+    
+    ngOnInit(): void {
+        this.getPlayers();
+    }
     
     onSelect(player: Player): void {
         this.selectedPlayer = player;

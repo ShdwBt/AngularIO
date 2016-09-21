@@ -42,6 +42,25 @@ export class PlayersComponent implements OnInit {
         this.selectedPlayer = player;
     }
     
+    add(name: string): void {
+        name = name.trim();
+        if (!name) { return; }
+        this.playerService.create(name)
+            .then(player => {
+                this.players.push(player);
+                this.selectedPlayer = null;
+            });
+    }
+    
+    delete(player: Player): void {
+        this.playerService
+            .delete(player.id)
+            .then(() => {
+                this.players = this.players.filter(p => p !== player);
+                if (this.selectedPlayer === player) { this.selectedPlayer = null; }
+            });
+    }
+    
     gotoDetail(): void {
         this.router.navigate(['/detail', this.selectedPlayer.id]);
     }

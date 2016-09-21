@@ -29,8 +29,9 @@ h3 {
     color: #eee;
     max-height: 120px;
     min-width: 120px;
-    background-color: #607D8B;
+    background-color: black;
     border-radius: 2px;
+    background-image: url(src/images/PsgBlackLogo.jpg);
 }
 h4 {
     position: relative;
@@ -38,7 +39,7 @@ h4 {
 .module:hover {
     background-color: #EEE;
     cursor: pointer;    
-    color: #607d8b;
+    color: rgba(226, 29, 29, 1);/* black; */
 }
 .grid-pad {
     padding: 10px 0;

@@ -30,4 +30,9 @@ export class PlayerDetailComponent implements OnInit {
         window.history.back();
     }
     
+    save(): void {
+        this.playerService.update(this.player)
+    .then(this.goBack);
+    }
+ 
 }

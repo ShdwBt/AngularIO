@@ -16,11 +16,16 @@
 
     <script src="systemjs.config.js"></script>
     
-    <!--    <script src="node_modules/ng2-ckeditor/lib/CKEditor.js"></script>-->
+    <script src="/ckeditor/ckeditor.js"></script>
+        
 <!--    <script src="//cdn.ckeditor.com/4.5.8/full/ckeditor.js"></script>-->
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>
+    <script>
+       CKEDITOR.replace( 'editor1' );
+    </script>
+    
   </head>
 
   <body>

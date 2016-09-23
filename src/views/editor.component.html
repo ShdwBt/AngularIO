@@ -1,0 +1,8 @@
+<!--
+<textarea name="editor1" id="editor1" rows="10" cols="80">
+    This is my textarea to be replaced with CKEditor.
+</textarea>
+-->
+
+<ckeditor [(ngModel)]="ckeditorContent" [config]="{uiColor: '#99000'}" (change)="onChange($event)" (ready)="onReady($event)" debounce="500"></ckeditor>
+        

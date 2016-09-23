@@ -2,6 +2,7 @@ import { NgModule }                 from '@angular/core';
 import { BrowserModule }            from '@angular/platform-browser';
 import { FormsModule }              from '@angular/forms';
 import { HttpModule }               from '@angular/http';
+import { platformBrowserDynamic }   from '@angular/platform-browser-dynamic';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule }     from 'angular2-in-memory-web-api';
@@ -47,7 +48,9 @@ import { CKEditorModule }           from 'ng2-ckeditor';
         PlayerService
     ],
     
-    bootstrap: [ AppComponent ]
+    bootstrap: [ AppComponent, EditorComponent ]
 })
 
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

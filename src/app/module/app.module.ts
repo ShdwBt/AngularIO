@@ -12,14 +12,16 @@ import { PlayerDetailComponent }    from './../../players/player/detail/player-d
 
 import { DashboardComponent }       from './../../dashboard/dashboard.component';
 import { PlayersComponent }         from './../../players/players.component';
-import { PlayerSearchComponent }         from './../../players/player/search/player-search.component';
-
+import { PlayerSearchComponent }    from './../../players/player/search/player-search.component';
+import { EditorComponent }          from './../../editor/editor.component';
 
 import { PlayerService }            from './../../players/player/service/player.service';
 
 import { routing }                  from './../routing/app.routing';
 
 import './../../rxjs-extensions';
+
+import { CKEditorModule }           from 'ng2-ckeditor';
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import './../../rxjs-extensions';
         FormsModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
-        routing
+        routing,
+        CKEditorModule
     ],
     
     declarations: [
@@ -36,10 +39,13 @@ import './../../rxjs-extensions';
         PlayerDetailComponent,
         DashboardComponent,
         PlayersComponent,
-        PlayerSearchComponent
+        PlayerSearchComponent,
+        EditorComponent
     ],
     
-    providers: [PlayerService],
+    providers: [
+        PlayerService
+    ],
     
     bootstrap: [ AppComponent ]
 })

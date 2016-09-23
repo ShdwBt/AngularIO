@@ -4,6 +4,7 @@ import { Routes, RouterModule }         from '@angular/router';
 import { PlayersComponent }             from './../../players/players.component';
 import { DashboardComponent }           from './../../dashboard/dashboard.component';
 import { PlayerDetailComponent }        from './../../players/player/detail/player-detail.component';
+import { EditorComponent }             from './../../editor/editor.component';
 
 const appRoutes: Routes = [ 
     {
@@ -19,6 +20,11 @@ const appRoutes: Routes = [
     {
         path: 'detail/:id',
         component: PlayerDetailComponent
+    },
+
+    {
+        path: 'editor',
+        component: EditorComponent
     }
 ];
 

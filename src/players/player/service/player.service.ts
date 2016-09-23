@@ -1,5 +1,7 @@
 import { Injectable }       from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Headers, Http }    from '@angular/http';
+
+import { Observable }       from 'rxjs/Observable';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -7,7 +9,8 @@ import { Player }           from './../player';
 
 @Injectable()
 export class PlayerService {
-    private playersUrl = './../players'
+    //private playersUrl = './../in-memory/players';
+    private playersUrl = './../players';
     private headers = new Headers({'Content-Type': 'application/json'});
     
     constructor(private http: Http){}
@@ -20,6 +23,15 @@ export class PlayerService {
             .then(response => response.json().data as Player[])
             .catch(this.handleError);
     }
+    
+//    getPlayers(): Observale<Player[]> {
+//        return this
+//            .http
+//            .get(this.playersUrl)
+//            .map()
+//            .then(response => response.json().data as Player[])
+//            .catch(this.handleError);
+//    }
     
     getPlayer(id: number): Promise<Player> {
         return this

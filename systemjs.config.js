@@ -27,6 +27,7 @@
       'rxjs':                       'npm:rxjs',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
       'ng2-ckeditor': 'npm:ng2-ckeditor/lib/CKEditor.js',
+      'ckeditor': 'npm:ckeditor/ckeditor.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -43,7 +44,10 @@
       },
       'ng2-ckeditor': {
         "defaultExtension": "js"
-      }
+      },
+        'ckeditor': {
+          "defaultExtension": "js"    
+        }
     }//,
 //    map: {
 //      "ng2-ckeditor": "node_modules/ng2-ckeditor/lib/CKEditor.js"

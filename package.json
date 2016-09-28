@@ -34,6 +34,7 @@
     "angular2": "^2.0.0-beta.17",
     "angular2-in-memory-web-api": "0.0.20",
     "bootstrap": "^3.3.6",
+    "ckeditor": "^4.5.11",
     "core-js": "^2.4.1",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "^0.1.2",

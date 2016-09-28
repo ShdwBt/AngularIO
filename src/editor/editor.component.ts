@@ -1,24 +1,29 @@
- import { Component } from '@angular/core';
-import {bootstrap, Component, Directive, NgFor, View, ElementRef} from 'angular2/angular2';
+import { Component, ElementRef , AfterViewInit } from '@angular/core';
+
+//import './../../node_modules/ckeditor/ckeditor.js';
+import * as ckeditor from "ckeditor";
+//let ckeditor = require("node_modules/ckeditor/ckeditor.js");
 
 @Component({
     selector: 'my-editor',
     templateUrl: 'src/views/editor.component.html'
-    //directives: [ CKEditor ]
 })
 
  
- class CKEditor {
-    constructor(_elm: ElementRef) {
-        CKEDITOR.replace(_elm.nativeElement);
-    }
-}
- 
-export class EditorComponent{
+export class EditorComponent implements AfterViewInit{
     ckeditorContent:string;
     
-   constructor(){
-        this.ckeditorContent = "<p>My HTML 2</p>";
-//        CKEDITOR.replace('editor1');
+    constructor(){
+        this.ckeditorContent = "<p>Editor is Load</p>";
+
+    }
+////    ngOnInit(){
+////       window['CKEDITOR']['replace']( 'editor1' );
+////    }
+    ngAfterViewInit()
+    {
+
+        ckeditor.basePath="/node_modules/ckeditor/";
+
     }
 }

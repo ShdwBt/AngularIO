@@ -1,8 +1,11 @@
 import { Component, ElementRef , AfterViewInit } from '@angular/core';
 
 //import './../../node_modules/ckeditor/ckeditor.js';
-import * as ckeditor from "ckeditor";
-//let ckeditor = require("node_modules/ckeditor/ckeditor.js");
+//import * as ckeditor from "ckeditor";
+//let ckeditor = require("node_modules/ckeditor/ckeditor.js"); // Ckeditor module
+
+let ckeditor = require("ckeditor/ckeditor.js");
+
 
 @Component({
     selector: 'my-editor',

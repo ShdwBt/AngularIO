@@ -1,4 +1,4 @@
-import { NgModule }                 from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA }                 from '@angular/core';
 import { BrowserModule }            from '@angular/platform-browser';
 import { FormsModule }              from '@angular/forms';
 import { HttpModule }               from '@angular/http';
@@ -22,7 +22,7 @@ import { routing }                  from './../routing/app.routing';
 
 import './../../rxjs-extensions';
 
-//import { CKEditorModule }           from 'ckeditor';
+import { CKEditorModule }           from 'ckeditor';
 
 
 @NgModule({
@@ -31,8 +31,8 @@ import './../../rxjs-extensions';
         FormsModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
-        routing
-        //CKEditorModule
+        routing,
+        CKEditorModule
     ],
     
     declarations: [
@@ -48,7 +48,8 @@ import './../../rxjs-extensions';
         PlayerService
     ],
     
-    bootstrap: [ AppComponent, EditorComponent ]
+    bootstrap: [ AppComponent, EditorComponent ],
+    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 
 export class AppModule { }

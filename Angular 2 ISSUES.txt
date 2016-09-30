@@ -1,0 +1,64 @@
+Issues ckeditor :
+
+	http://stackoverflow.com/questions/38266210/ng2-ckeditor-not-working-in-angular2-app-why
+
+	http://stackoverflow.com/questions/37703351/ng2-ckeditor-404-not-found-angular2
+
+	http://stackoverflow.com/questions/37006093/ng2-ckeditor-ckeditor-not-defined
+
+	http://www.yzjingying.net/605864581.htm	
+
+	http://stackoverflow.com/questions/38513358/load-ckeditor-in-angular-2
+
+	http://stackoverflow.com/questions/35978025/angular2-ckeditor-use
+
+Issues npm : 
+	http://stackoverflow.com/questions/38771017/error-fsevents1-0-14-in-windows-7
+
+	https://www.npmjs.com/package/extract-text-webpack-plugin
+
+	https://github.com/auth0/auth0-ionic2/issues/9
+
+	@angular/forms@2.0.1 requires a peer of @angular/core@2.0.1 but none was installed
+
+	https://github.com/npm/npm/issues/5499
+
+	package json get multiple dependencies
+
+	https://angular.io/docs/ts/latest/guide/npm-packages.html
+
+	how to get all versions of an angular dependencies
+
+	https://www.npmjs.com/package/npm-check-updates
+
+	http://stackoverflow.com/questions/16073603/how-do-i-update-each-dependency-in-package-json-to-the-latest-version
+
+	http://stackoverflow.com/questions/34489916/load-external-js-script-dynamically-in-angular-2
+
+	http://stackoverflow.com/questions/37081943/angular2-import-external-js-file-into-component
+
+	https://www.thepolyglotdeveloper.com/2016/01/include-external-javascript-libraries-in-an-angular-2-typescript-project/
+
+Possibilities :
+
+	https://github.com/chymz/ng2-ckeditor
+
+	https://www.npmjs.com/package/ckeditor
+
+	https://www.npmjs.com/package/ng2-ckeditor
+
+	http://plnkr.co/edit/wHPV4rOTVK4lLTEZHxif?p=preview
+
+	https://embed.plnkr.co/hnB0R3/
+
+	https://www.youtube.com/watch?v=cl3vEnx_HCY // with kcfinder
+
+	http://sdk.ckeditor.com/samples/draganddrop.html    // drag and drop
+
+	https://www.tutorielsenfolie.com/tutoriels-32-CKEditor.html
+
+
+How to ng2:
+	https://www.sitepoint.com/getting-started-with-angular-2-using-typescript/
+	http://blog.scottlogic.com/2015/12/24/creating-an-angular-2-build.html 			// with gulp
+	http://learnangular2.com/components/

@@ -26,7 +26,7 @@
       // other libraries
       'rxjs':                       'npm:rxjs',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-     
+      'ng2-ckeditor': 'npm:node_modules/ng2-ckeditor/lib/CKEditor.js',
       'ckeditor': 'npm:node_modules/ckeditor/ckeditor.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -42,9 +42,9 @@
         main: './index.js',
         defaultExtension: 'js'
       },
-//      'ng2-ckeditor': {
-//        "defaultExtension": "js"
-//      },
+      'ng2-ckeditor': {
+        "defaultExtension": "js"
+      },
         'ckeditor': {
           "defaultExtension": "js"    
         }

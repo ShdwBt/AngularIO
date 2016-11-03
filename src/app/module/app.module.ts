@@ -22,7 +22,7 @@ import { routing }                  from './../routing/app.routing';
 
 import './../../rxjs-extensions';
 
-//import { CKEditorModule }           from 'ckeditor';
+import { CKEditorModule }           from 'ng2-ckeditor';
 
 
 @NgModule({
@@ -31,8 +31,8 @@ import './../../rxjs-extensions';
         FormsModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
-        routing
-        //CKEditorModule
+        routing,
+        CKEditorModule
     ],
     
     declarations: [

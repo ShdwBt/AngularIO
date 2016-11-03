@@ -10,7 +10,7 @@ let ckeditor = require("node_modules/ckeditor/ckeditor.js"); // Ckeditor module
 })
 
  
-export class EditorComponent { //implements AfterViewInit{
+export class EditorComponent implements AfterViewInit{
     ckeditorContent:string;
     
     constructor(){

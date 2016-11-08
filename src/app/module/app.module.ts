@@ -15,8 +15,11 @@ import { DashboardComponent }       from './../../dashboard/dashboard.component'
 import { PlayersComponent }         from './../../players/players.component';
 import { PlayerSearchComponent }    from './../../players/player/search/player-search.component';
 import { EditorComponent }          from './../../editor/editor.component';
+import { SpringComponent }          from './../../spring/spring.component';
+
 
 import { PlayerService }            from './../../players/player/service/player.service';
+import { SpringService }            from './../../spring/spring.service';
 
 import { routing }                  from './../routing/app.routing';
 
@@ -41,14 +44,17 @@ import { CKEditorModule }           from 'ng2-ckeditor';
         DashboardComponent,
         PlayersComponent,
         PlayerSearchComponent,
-        EditorComponent
+        EditorComponent,
+        SpringComponent
+        
     ],
     
     providers: [
-        PlayerService
+        PlayerService,
+        SpringService
     ],
     
-    bootstrap: [ AppComponent, EditorComponent ]
+    bootstrap: [ AppComponent, EditorComponent, SpringComponent ]
 })
 
 export class AppModule { }

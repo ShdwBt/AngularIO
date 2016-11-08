@@ -9,8 +9,11 @@ import { Player }           from './../player';
 
 @Injectable()
 export class PlayerService {
-    private playersUrl = './../in-memory/players'; // For CHROME 
+    //private playersUrl = './../in-memory/players'; // For CHROME 
     //private playersUrl = './../players'; // for IE
+    
+    private playersUrl = 'http://localhost:8095/base';
+    
     private headers = new Headers({'Content-Type': 'application/json'});
     
     constructor(private http: Http){}

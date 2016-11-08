@@ -20,12 +20,16 @@ const appRoutes: Routes = [
     {
         path: 'detail/:id',
         component: PlayerDetailComponent
-    },
-
+    }//,
+//
+//    {
+//        path: 'editor',
+//        component: EditorComponent
+//    }
     {
-        path: 'editor',
-        component: EditorComponent
-    }
+        path: 'spring',
+        component: PlayerDetailComponent
+    }//,
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes); 

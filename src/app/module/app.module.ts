@@ -22,7 +22,7 @@ import { routing }                  from './../routing/app.routing';
 
 import './../../rxjs-extensions';
 
-import { CKEditorModule }           from 'ng2-ckeditor';
+//import { CKEditorModule }           from 'ng2-ckeditor';
 
 
 @NgModule({
@@ -31,8 +31,8 @@ import { CKEditorModule }           from 'ng2-ckeditor';
         FormsModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
-        routing,
-        CKEditorModule
+        routing/*,*/
+        //CKEditorModule
     ],
     
     declarations: [
@@ -41,14 +41,14 @@ import { CKEditorModule }           from 'ng2-ckeditor';
         DashboardComponent,
         PlayersComponent,
         PlayerSearchComponent,
-        EditorComponent
+        //EditorComponent
     ],
     
     providers: [
         PlayerService
     ],
     
-    bootstrap: [ AppComponent, EditorComponent ]
+    bootstrap: [ AppComponent] //, EditorComponent ]
 })
 
 export class AppModule { }

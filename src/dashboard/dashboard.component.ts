@@ -5,6 +5,9 @@ import { PlayerService }            from './../players/player/service/player.ser
 
 import { Player }                   from './../players/player/player';
 
+import { Springobject }                   from './../spring/springobject';
+import { SpringService } from './../spring/spring.service';
+
 
 
 @Component({
@@ -15,19 +18,19 @@ import { Player }                   from './../players/player/player';
 
 export class DashboardComponent implements OnInit {
 
-    players: Player[] = [];
+    springobject: Springobject[] = [];
 
     constructor(
         private router: Router,
-        private playerService: PlayerService
+        private springService: SpringService
     ) { }
 
     ngOnInit(): void {
-        this.playerService.getPlayers().then(players => this.players = players.slice(7, 11));
+        this.springService.getSpringobject().then(springobject => this.springobject = springobject.slice(7, 11));
     }
 
-    gotoDetail(player: Player): void { 
-        let link = ['/detail', player.id];
+    gotoDetail(springobject: Springobject): void { 
+        let link = ['/detail', springobject.lastName];
         this.router.navigate(link);
     }
 }

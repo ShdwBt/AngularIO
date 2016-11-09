@@ -33,7 +33,7 @@ import { CKEditorModule }           from 'ng2-ckeditor';
         BrowserModule,
         FormsModule,
         HttpModule,
-        InMemoryWebApiModule.forRoot(InMemoryDataService),
+        //InMemoryWebApiModule.forRoot(InMemoryDataService),
         routing,
         CKEditorModule
     ],
@@ -54,7 +54,7 @@ import { CKEditorModule }           from 'ng2-ckeditor';
         SpringService
     ],
     
-    bootstrap: [ AppComponent, EditorComponent, SpringComponent ]
+    bootstrap: [ AppComponent ]
 })
 
 export class AppModule { }

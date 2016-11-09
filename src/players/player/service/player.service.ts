@@ -24,7 +24,7 @@ export class PlayerService {
             .catch(this.handleError);
     }
     
-//    getPlayers(): Observale<Player[]> {
+//    getPlayers(): Observable<Player[]> {
 //        return this
 //            .http
 //            .get(this.playersUrl)

@@ -1,10 +1,11 @@
 import { Component, OnInit }        from '@angular/core';
 import { Router }                   from '@angular/router';
 
+import { PlayerService }            from './../players/player/service/player.service';
 
 import { Player }                   from './../players/player/player';
 
-import { PlayerService }            from './../players/player/service/player.service';
+
 
 @Component({
     selector: 'my-dashboard',

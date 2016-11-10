@@ -30,7 +30,7 @@ export class PlayerSearchComponent implements OnInit {
         this.searchTerms.next(term);
     }
     
-    // We're going to turn the stream of search terms into a stream of Hero arrays and assign the result to the heroes property.
+    // We're going to turn the stream of search terms into a stream of Player arrays and assign the result to the heroes property.
     ngOnInit(): void {
         this.players = this
             .searchTerms

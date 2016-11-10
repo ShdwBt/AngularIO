@@ -1,12 +1,12 @@
 <ul class="players">
-    <li *ngFor= "let s of springobject" [class.selected]="player === selectedPlayer" (click)="onSelect(player)">
-        <span class="badge">{{player.id}}</span> {{player.name}}
+    <li *ngFor= "let player of players" [class.selected]="player === selectedPlayer" (click)="onSelect(player)">
+        <span class="badge">{{player.id}}</span> {{player.lastName}}
             <button class="delete" (click)="delete(player); $event.stopPropagation()">x</button>
     </li>
 </ul>
 <div *ngIf="selectedPlayer">
     <h2>
-        {{selectedPlayer.name | uppercase}} is my best player
+        {{selectedPlayer.lastName | uppercase}} is my best player
     </h2>
     <button (click)="gotoDetail()">View Details</button>
 </div>

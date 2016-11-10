@@ -1,4 +1,6 @@
 export class Player {
     id: number;
-    name: string;
+    lastName: string;
+    firstName: string;
+    //name: string;
 }

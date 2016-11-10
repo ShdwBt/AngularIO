@@ -19,7 +19,7 @@ The player of let player is the player in onSelect arg
 })
 
 export class PlayersComponent implements OnInit {
-    players: Springobject[];
+    players: Player[];
     
     selectedPlayer: Player;
     
@@ -32,7 +32,7 @@ export class PlayersComponent implements OnInit {
 
     //We pass our callback function as an argument to the Promise's then method
     getPlayers(): void {
-        this.playerService.getSpringobject().then(players => this.players = players);
+        this.playerService.getPlayers().then(players => this.players = players);
     }
     
     ngOnInit(): void {

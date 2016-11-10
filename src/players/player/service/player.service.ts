@@ -12,18 +12,18 @@ import {Springobject} from './../../../spring/springobject';
 @Injectable()
 export class PlayerService {
     
-    private _springObjectUrl = 'http://localhost:8095/base';
+    private _playersUrl = 'http://localhost:8095/base';
     
-    private playersUrl = './../in-memory/players'; // For CHROME 
+    //private playersUrl = './../in-memory/players'; // For CHROME 
     //private playersUrl = './../players'; // for IE
     private headers = new Headers({'Content-Type': 'application/json'});
     
     constructor(private http: Http){}
     // we use Promise for async service to do some work and give it a callback function.
-    getSpringobject(): Promise<Springobject[]> {
+    getPlayers(): Promise<Player[]> {
         return this
             .http
-            .get(this._springObjectUrl)
+            .get(this._playersUrl)
             .toPromise()
             .then(response => response.json())
             .catch(this.handleError);
@@ -46,14 +46,14 @@ export class PlayerService {
     
     create(name: string): Promise<Player> {
         return this.http
-            .post(this.playersUrl, JSON.stringify({name: name}), {headers: this.headers})
+            .post(this._playersUrl, JSON.stringify({name: name}), {headers: this.headers})
             .toPromise()
             .then(res => res.json().data)
             .catch(this.handleError);
     }
     
     update(player: Player): Promise<Player> {
-        const url = `${this.playersUrl}/${player.id}`;
+        const url = `${this._playersUrl}/${player.id}`;
         return this.http
             .put(url, JSON.stringify(player), {headers: this.headers})
             .toPromise()
@@ -62,7 +62,7 @@ export class PlayerService {
     }
     
     delete(id: number): Promise<void> {
-        let url = `${this.playersUrl}/${id}`;
+        let url = `${this._playersUrl}/${id}`;
         return this.http.delete(url, {headers: this.headers})
             .toPromise()
             .then(() => null)

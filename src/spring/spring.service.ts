@@ -14,10 +14,11 @@ export class SpringService {
 
     private _springObjectUrl = 'http://localhost:8095/base';
 
-    
-    getSpringobject() {
+    //validate
+    getSpringobject() : Promise<Springobject[]> {
         return this.http.get(this._springObjectUrl)
-            .map(res => <Springobject[]> res.json())
+            .toPromise()
+            .then(res => <Springobject[]> res.json())
             .catch(this.handleError);
     }
     

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpModule} from '@angular/http';
 
-import {InMemoryBackendService,
-        SEED_DATA}         from 'angular2-in-memory-web-api';
+//import {InMemoryBackendService,
+//        SEED_DATA}         from 'angular2-in-memory-web-api';
 
 import {SpringService} from './spring.service';
 import {Springobject} from './springobject';
@@ -39,7 +39,7 @@ export class SpringComponent implements OnInit{
     getSpringobject(){
 
        /* this._springService.getSpringobject().then(s => this._springService = s)*/
-        this._springService.getSpringobject().subscribe(
+        this._springService.getSpringobject().then(
             //s => this.springobject = s,
             s => this.springobject = s, 
         

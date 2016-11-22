@@ -12,7 +12,8 @@ import {Springobject} from './../../../spring/springobject';
 @Injectable()
 export class PlayerService {
     
-    private _playersUrl = 'http://localhost:8095/base';
+    private _playersUrl = 'http://localhost:8095/players';
+    private _playerUrl = 'http:://localhost:8095/player{id}';
     
     //private playersUrl = './../in-memory/players'; // For CHROME 
     //private playersUrl = './../players'; // for IE
@@ -29,15 +30,6 @@ export class PlayerService {
             .catch(this.handleError);
     }
     
-//    getPlayers(): Observable<Player[]> {
-//        return this
-//            .http
-//            .get(this.playersUrl)
-//            .map()
-//            .then(response => response.json().data as Player[])
-//            .catch(this.handleError);
-//    }
-    
     getPlayer(id: number): Promise<Player> {
         return this
             .getPlayers()
@@ -53,7 +45,7 @@ export class PlayerService {
     }
     
     update(player: Player): Promise<Player> {
-        const url = `${this._playersUrl}/${player.id}`;
+        const url = `${this._playerUrl}/${player.id}`;
         return this.http
             .put(url, JSON.stringify(player), {headers: this.headers})
             .toPromise()
